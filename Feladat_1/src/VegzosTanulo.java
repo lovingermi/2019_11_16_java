@@ -2,6 +2,7 @@
 public class VegzosTanulo extends Tanulo
 {
 	private double erettsegiAtlag;
+	private int ballagasiKoltseg=20000;
 	
 	public VegzosTanulo(String nev, int kor,char osztaly,double eretsegAtlag)
 	{
@@ -15,5 +16,8 @@ public class VegzosTanulo extends Tanulo
 	public VegzosTanulo(String nev, char osztaly) { 
         super(nev, 13, osztaly);
     } 
-
+	public int szamolHaviOsztalypenz()
+	{
+		return super.szamolHaviOsztalypenz()+ballagasiKoltseg/10; 
+	}
 }
